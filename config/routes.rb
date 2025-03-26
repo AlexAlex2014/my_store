@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'products#index'
+
+  get 'register', to: 'registrations#new', as: 'register'
+  post 'register', to: 'registrations#create'
+  resource :session
+  resources :passwords, param: :token
   resources :products
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
