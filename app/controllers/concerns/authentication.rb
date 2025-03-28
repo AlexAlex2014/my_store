@@ -18,7 +18,6 @@ module Authentication
     end
 
     def require_authentication
-      byebug
       resume_session || request_authentication
     end
 
